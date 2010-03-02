@@ -1,0 +1,16 @@
+/*
+  moduleLib.h - modified version of vxWorks' moduleLib with some 
+*/
+
+#ifndef MODULELIB_H
+#define MODULELIB_H
+
+//this is actually in loadLib in vxWorks but for simplicity i have put it here..
+MODULE_ID loadModule(int fd, int symFlag);
+
+//Partial implementation of moduleLib()
+MODULE_ID moduleCreate(char *name, int format, int flags);
+STATUS moduleDelete(MODULE_ID moduleId);
+MODULE_ID moduleFindByName(char *moduleName);
+
+#endif
