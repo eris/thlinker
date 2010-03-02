@@ -1,0 +1,11 @@
+Quick attempt at runtime ELF linker for NDS.
+More details @ http://blea.ch/wiki/index.php/Elf_linking
+
+Was intended for older version of libnds and uses various 
+custom external libs mostly if not entirely in main.c. The
+only relavent function in main.c is:
+ elfStart("nitro:/arm-eabi-test.o");
+
+which loads and executes the test functions. 
+
+Hope its useful...
